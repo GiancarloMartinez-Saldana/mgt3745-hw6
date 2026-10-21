@@ -28,4 +28,10 @@ Most frequent first. Your top row is the first finding in COMPARISON.md.
 
 | Error | Builder | Frequency | EARS row | Evidence |
 |---|---|---|---|---|
-| <what went wrong> | <bolt / AI Studio / both> | <count> | <ID> | <file and line, screenshot, or test> |
+| Claimed a row the build cannot exercise (save failure path is dead code) | bolt | 1 | F3-2 | bolt app.js:39-47 and 211 |
+| Files and dependencies the prompt excluded (framework project, Gemini key placeholder) | AI Studio | 7 files | n/a (scope) | aistudio package.json, metadata.json, .env.example |
+| Invented content the spec does not have (trip name, members, seeded moments, filters, sample photos) | AI Studio | 5 | F3-1 | aistudio index.html:19-21, 65, 140; app.js:465 |
+| Hidden elements always visible (CSS overrides `hidden`) | bolt | 2 | F3-2, F3-3 | bolt styles.css:170-171, 200-204; docs/img/bolt.png |
+| `innerHTML` and `window` globals, against STANDARDS.md | AI Studio | 5 | F3-1 | aistudio app.js:51, 77-78, 242, 251 |
+| Added a required name field the spec does not ask for | bolt | 1 | F3-1 | bolt app.js:33 (`hasName &&`) |
+| Raw color or inline style instead of a STYLE.md token | both | 1 each | n/a (STYLE) | bolt styles.css:207; aistudio app.js:245 |

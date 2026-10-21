@@ -21,8 +21,6 @@ F3-3. IF a member submits a moment with no photo, note, or place, THEN the app s
 |---|---|
 | ![bolt build](docs/img/bolt.png) | ![AI Studio build](docs/img/aistudio.png) |
 
-<Replace the two images above with your own screenshots, or one side-by-side GIF.>
-
 ## Status
 
 <One or two sentences: how many EARS rows each builder satisfied, and your recommendation in one line.>
@@ -33,7 +31,7 @@ F3-3. IF a member submits a moment with no photo, note, or place, THEN the app s
 npm test
 ```
 
-<Say what the test checks and what output to expect.>
+The test runs each builder's own `canAddMoment` function (copied from its zip into `evals/impl/`) through the same cases: F3-3 refuses a moment with no photo, note, or place; F3-1 accepts any one of them; and a spec-gap probe checks that a note of only spaces counts as no note. Expected output: 6 tests, 6 pass.
 
 ## Links
 
