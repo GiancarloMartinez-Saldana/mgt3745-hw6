@@ -60,12 +60,17 @@ Every place where both builders guessed, or guessed differently.
 
 | Criterion | Weight | bolt.new | AI Studio |
 |---|---|---|---|
-| <criterion> | <weight> | <1 to 5> | <1 to 5> |
-| **Weighted total** | | <total> | <total> |
+| Fits the ADR-001 stack | 5 | 4: three plain files in an ES module; only a small Vite wrapper to drop | 2: the page is plain, but it sits inside a React, Express, and Gemini project and leaks globals |
+| Stays within the spec | 4 | 4: one addition (a required name field) | 2: invented trip, members, seeded moments, filters, and sample photos |
+| Handles failure honestly (F3-2) | 4 | 1: the error path can never run | 4: the failure can be shown and inputs are kept, though only through a test checkbox in the UI |
+| Code meets STANDARDS.md | 3 | 4: `textContent` throughout, no globals; one raw color | 2: `innerHTML`, `window` globals, an inline style |
+| **Weighted total (max 80)** | | **52** | **40** |
 
 ### Decision
 
-<Which builder your team should use for this feature in Phase 2, why, and at least one thing that gets harder with that choice. Tie the reasoning to your team's ADR-001 stack.>
+Use **bolt.new** for F3 in Phase 2. Its output is already the shape ADR-001 asks for: `index.html`, `styles.css`, and an `app.js` module that renders with `textContent`, so moving it onto our Worker means replacing `saveMoment` with a `fetch` to the Worker rather than unpicking a framework. AI Studio did the one thing bolt did not (a failure you can see), but it did so inside a React, Express, and Gemini scaffold the team would have to delete, around invented members and content that would leak into review.
+
+**What gets harder:** bolt left F3-2 as dead code, so the team must write the real failure path itself once `saveMoment` calls the Worker, and test it against a Worker that returns an error. We also have to fix its CSS so `hidden` works, and drop the required name field once F1 accounts exist.
 
 ## Handoff to the Team
 
