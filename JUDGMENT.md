@@ -24,16 +24,16 @@ F3-2 (a failed save tells the member and keeps the photo, note, and place on scr
 
 | Item | Question (Yes / No) | You | Second grader |
 |---|---|---|---|
-| J1 | bolt.new: can you make the app show a message that a moment failed to save? | | |
-| J2 | AI Studio: can you make the app show a message that a moment failed to save? | | |
-| J3 | bolt.new: after a failed save, are the photo, note, and place all still on screen? | | |
-| J4 | AI Studio: after a failed save, are the photo, note, and place all still on screen? | | |
-| J5 | bolt.new: does the empty-form error appear inline under the form, with no pop-up or modal? | | |
-| J6 | AI Studio: does the empty-form error appear inline under the form, with no pop-up or modal? | | |
-| J7 | bolt.new: before you type anything, is the form free of empty or broken boxes? | | |
-| J8 | AI Studio: before you type anything, is the form free of empty or broken boxes? | | |
-| J9 | bolt.new: is every button at least 44px tall? | | |
-| J10 | AI Studio: is every button at least 44px tall? | | |
+| J1 | bolt.new: can you make the app show a message that a moment failed to save? | N | |
+| J2 | AI Studio: can you make the app show a message that a moment failed to save? | Y | |
+| J3 | bolt.new: after a failed save, are the photo, note, and place all still on screen? | N | |
+| J4 | AI Studio: after a failed save, are the photo, note, and place all still on screen? | Y | |
+| J5 | bolt.new: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | |
+| J6 | AI Studio: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | |
+| J7 | bolt.new: before you type anything, is the form free of empty or broken boxes? | N | |
+| J8 | AI Studio: before you type anything, is the form free of empty or broken boxes? | Y | |
+| J9 | bolt.new: is every button at least 44px tall? | Y | |
+| J10 | AI Studio: is every button at least 44px tall? | Y | |
 
 **Agreement rate:** TODO(Gian): N of 10, %
 
