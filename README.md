@@ -23,7 +23,7 @@ F3-3. IF a member submits a moment with no photo, note, or place, THEN the app s
 
 ## Status
 
-<One or two sentences: how many EARS rows each builder satisfied, and your recommendation in one line.>
+bolt.new satisfied 2 of 3 F3 rows (F3-2's failure path can never run); AI Studio satisfied 3 of 3 but added 7 unneeded files and invented content. Recommendation: use bolt.new for F3 in Phase 2 and write the save-failure path ourselves against the Worker (weighted 52 to 40, [COMPARISON.md](COMPARISON.md#decision)).
 
 ## How to Run the Evals
 
@@ -42,12 +42,14 @@ The test runs each builder's own `canAddMoment` function (copied from its zip in
 - [builds/](builds/): bolt.zip and aistudio.zip
 - [docs/DDR-001.md](docs/DDR-001.md) (bolt.new), [docs/DDR-002.md](docs/DDR-002.md) (AI Studio)
 - Team pull request or issue: <URL>
-- Deployed Worker (only if you completed the proxy step): <URL>
+- Deployed Worker: not used; F3 has no AI behavior, so the proxy step does not apply.
 
 ## Hours
 
-<Total hours spent, with a one-line breakdown.>
+TODO(Gian): total. Builds: about 40 minutes for bolt.new and 1 hour for AI Studio, including evaluation.
 
 ## AI Use
 
-<Every tool that wrote more than a line or two, each with a link to its DDR.>
+- bolt.new (Claude Sonnet) wrote `builds/bolt.zip`: [DDR-001](docs/DDR-001.md).
+- Google AI Studio (Gemini 3.8 Flash) wrote `builds/aistudio.zip`: [DDR-002](docs/DDR-002.md).
+- Claude (Claude Code) copied the team context, drafted `prompts/PROMPT.md`, the shared eval, the Prediction Stake wording (Gian chose and committed it), the COMPARISON.md evidence, weights, scores, and decision (Gian approved the weights before scoring), both DDR drafts, the error log, JUDGMENT.md questions, and this README. Gian reviewed every file. Claude was not a judgment grader.
