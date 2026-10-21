@@ -51,7 +51,10 @@ Every place where both builders guessed, or guessed differently.
 
 | Criterion | Weight (1 to 5) | Why |
 |---|---|---|
-| <criterion> | <weight> | <reason> |
+| Fits the ADR-001 stack (plain HTML, CSS, and JS that can move onto our Worker and D1) | 5 | ADR-001 commits the team to a static page plus a Worker; output that needs a framework or another vendor has to be rewritten before it is useful. |
+| Stays within the spec (no invented features, content, or services) | 4 | Every extra the builder adds is code the team must review, test, or delete, and invented services cross a trust boundary nobody approved. |
+| Handles failure honestly (F3-2 can actually be shown) | 4 | Our RAT is about capture in the moment; losing a moment on a failed save is the failure members would notice most. |
+| Code meets STANDARDS.md (textContent, no globals, tokens only) | 3 | These are review blockers in the team repository, but each one is a small, local fix. |
 
 ### Scores (commit after the weights)
 
