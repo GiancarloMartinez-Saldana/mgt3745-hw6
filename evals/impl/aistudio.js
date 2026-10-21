@@ -1,5 +1,13 @@
-// Copy the function AI Studio wrote for F3-3 here and export it as canAddMoment.
-// Record any change you had to make in docs/DDR-002.md.
+// Copied unchanged from AI Studio's app.js (builds/aistudio.zip, app.js);
+// only the `export` keyword was added. See docs/DDR-002.md.
 export function canAddMoment(moment) {
-  throw new Error("Replace with the AI Studio implementation");
+  if (!moment) {
+    return false;
+  }
+
+  const hasPhoto = typeof moment.photo === 'string' && moment.photo.trim().length > 0;
+  const hasNote = typeof moment.note === 'string' && moment.note.trim().length > 0;
+  const hasPlace = typeof moment.place === 'string' && moment.place.trim().length > 0;
+
+  return hasPhoto || hasNote || hasPlace;
 }

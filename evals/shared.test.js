@@ -24,4 +24,10 @@ for (const [name, impl] of Object.entries(builds)) {
     assert.equal(impl.canAddMoment({ photo: null, note: "Best tacos ever", place: "", memberName: member }), true);
     assert.equal(impl.canAddMoment({ photo: null, note: "", place: "Tulum", memberName: member }), true);
   });
+
+  // Not an EARS row: the Open prediction in EVALS.md. F3-3 doesn't say
+  // whether a note of only spaces counts as "a note".
+  test(`${name}: spec gap: a note of only spaces counts as no note`, () => {
+    assert.equal(impl.canAddMoment({ photo: null, note: "   ", place: "", memberName: member }), false);
+  });
 }
