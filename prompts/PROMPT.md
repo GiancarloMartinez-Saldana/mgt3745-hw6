@@ -48,4 +48,5 @@ radius: 0.3rem
 
 ## Retries
 
-None.
+- bolt.new: none.
+- AI Studio: one. The first paste went into Chat mode, which returned code with no app. The same text was pasted unchanged into Build mode; nothing was cut. Recorded in [DDR-002](../docs/DDR-002.md).
