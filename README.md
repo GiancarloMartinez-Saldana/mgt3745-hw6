@@ -46,7 +46,7 @@ The test runs each builder's own `canAddMoment` function (copied from its zip in
 
 ## Hours
 
-TODO(Gian): total. Builds: about 40 minutes for bolt.new and 1 hour for AI Studio, including evaluation.
+About 5.5 hours in total: about 40 minutes for the bolt.new build and 1 hour for AI Studio (both including evaluation), with the rest on the Prediction Stake, the judgment eval, the comparison, and review of every file.
 
 ## AI Use
 
