@@ -18,25 +18,30 @@ F3-2 (a failed save tells the member and keeps the photo, note, and place on scr
 
 `builds/bolt.zip`, `builds/aistudio.zip`, `docs/img/bolt.png`, `docs/img/aistudio.png`, the F3 rows and STYLE.md rules in `prompts/PROMPT.md`, and this file's Procedure and Results questions. No summary of my findings.
 
-**Second grader:** TODO(Gian): a classmate's role, or the tool and model. Claude helped integrate and evaluate the builds, so it should not be the second grader.
+**Second grader:** ChatGPT (OpenAI), on 2026-10-21, given the four files above and the exact prompt below. Claude helped integrate and evaluate the builds, so it was not a grader.
+
+Prompt given to the second grader: the ten Results questions, the F3-2 row and the three STYLE.md rules above, and the instruction to answer Y or N from the attached files only, with one sentence of evidence (a file and line, or what the screenshot shows) per answer.
 
 ## Results
 
 | Item | Question (Yes / No) | You | Second grader |
 |---|---|---|---|
-| J1 | bolt.new: can you make the app show a message that a moment failed to save? | N | |
-| J2 | AI Studio: can you make the app show a message that a moment failed to save? | Y | |
-| J3 | bolt.new: after a failed save, are the photo, note, and place all still on screen? | N | |
-| J4 | AI Studio: after a failed save, are the photo, note, and place all still on screen? | Y | |
-| J5 | bolt.new: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | |
-| J6 | AI Studio: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | |
-| J7 | bolt.new: before you type anything, is the form free of empty or broken boxes? | N | |
-| J8 | AI Studio: before you type anything, is the form free of empty or broken boxes? | Y | |
-| J9 | bolt.new: is every button at least 44px tall? | Y | |
-| J10 | AI Studio: is every button at least 44px tall? | Y | |
+| J1 | bolt.new: can you make the app show a message that a moment failed to save? | N | N |
+| J2 | AI Studio: can you make the app show a message that a moment failed to save? | Y | Y |
+| J3 | bolt.new: after a failed save, are the photo, note, and place all still on screen? | N | N |
+| J4 | AI Studio: after a failed save, are the photo, note, and place all still on screen? | Y | Y |
+| J5 | bolt.new: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | Y |
+| J6 | AI Studio: does the empty-form error appear inline under the form, with no pop-up or modal? | Y | Y |
+| J7 | bolt.new: before you type anything, is the form free of empty or broken boxes? | N | N |
+| J8 | AI Studio: before you type anything, is the form free of empty or broken boxes? | Y | Y |
+| J9 | bolt.new: is every button at least 44px tall? | Y | Y |
+| J10 | AI Studio: is every button at least 44px tall? | Y | Y |
 
-**Agreement rate:** TODO(Gian): N of 10, %
+**Agreement rate:** 10 of 10, 100%
 
 ## Disagreements
 
-TODO(Gian): for each item where you and the second grader differ, why, and what it says about the question or the evidence.
+None. Two notes on why agreement was complete, and what that hides:
+
+- The second grader read the code and screenshots rather than running the apps, and cited the same lines this repository's COMPARISON.md cites (for example bolt app.js:39-47 for J1 and J3). Questions that can be settled from the code tend to agree; a grader who only used the running apps might have answered J9 and J10 differently, since those were answered from CSS `min-height` rules, not measured in the browser.
+- J3 is the weakest question. For bolt.new a save can never fail, so "are the inputs still on screen after a failed save?" has no observable case. Both graders answered No because the failure cannot happen, while the catch block would in fact keep the inputs. A better question would be "Can you trigger a failed save and then see your inputs still on screen?"
