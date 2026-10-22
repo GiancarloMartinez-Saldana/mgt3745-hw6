@@ -53,3 +53,4 @@ TODO(Gian): total. Builds: about 40 minutes for bolt.new and 1 hour for AI Studi
 - bolt.new (Claude Sonnet) wrote `builds/bolt.zip`: [DDR-001](docs/DDR-001.md).
 - Google AI Studio (Gemini 3.8 Flash) wrote `builds/aistudio.zip`: [DDR-002](docs/DDR-002.md).
 - Claude (Claude Code) copied the team context, drafted `prompts/PROMPT.md`, the shared eval, the Prediction Stake wording (Gian chose and committed it), the COMPARISON.md evidence, weights, scores, and decision (Gian approved the weights before scoring), both DDR drafts, the error log, JUDGMENT.md questions, and this README. Gian reviewed every file. Claude was not a judgment grader.
+- ChatGPT (OpenAI) was the second judgment grader; its prompt and answers are in [JUDGMENT.md](JUDGMENT.md).
