@@ -74,4 +74,4 @@ Use **bolt.new** for F3 in Phase 2. Its output is already the shape ADR-001 asks
 
 ## Handoff to the Team
 
-Pull request or issue proposing a FEATURES.md change: <URL>
+Pull request or issue proposing a FEATURES.md change: https://github.com/mehtaaashi05/mgt3745-team-Alpha-/pull/77

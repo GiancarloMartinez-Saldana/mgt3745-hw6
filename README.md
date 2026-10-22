@@ -41,7 +41,7 @@ The test runs each builder's own `canAddMoment` function (copied from its zip in
 - [prompts/PROMPT.md](prompts/PROMPT.md): the exact input both builders received
 - [builds/](builds/): bolt.zip and aistudio.zip
 - [docs/DDR-001.md](docs/DDR-001.md) (bolt.new), [docs/DDR-002.md](docs/DDR-002.md) (AI Studio)
-- Team pull request or issue: <URL>
+- Team pull request or issue: https://github.com/mehtaaashi05/mgt3745-team-Alpha-/pull/77
 - Deployed Worker: not used; F3 has no AI behavior, so the proxy step does not apply.
 
 ## Hours
