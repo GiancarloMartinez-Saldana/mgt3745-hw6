@@ -1,7 +1,5 @@
 # HW6: Two Builders, One Specification
 
-> Replace every line in angle brackets. A README that still carries template placeholders loses points.
-
 ## Feature
 
 **Team repository:** https://github.com/mehtaaashi05/mgt3745-team-Alpha-
